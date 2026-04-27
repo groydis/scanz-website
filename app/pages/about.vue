@@ -143,6 +143,19 @@
   </main>
 </template>
 
+<script setup lang="ts">
+useSeoMeta({
+  title: "About",
+  description:
+    "Learn about SCANZ, a community-first Star Citizen organisation for Australia and New Zealand players built around respect, teamwork, and all playstyles.",
+  ogTitle: "About SCANZ",
+  ogDescription:
+    "SCANZ is a community-first Star Citizen organisation where players can enjoy the game their way.",
+  ogImage: "/scanz-is-inclusive.png",
+  twitterCard: "summary_large_image",
+});
+</script>
+
 <style scoped>
 .about-page {
   min-height: 100%;

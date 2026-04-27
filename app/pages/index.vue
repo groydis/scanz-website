@@ -117,6 +117,19 @@
   </main>
 </template>
 
+<script setup lang="ts">
+useSeoMeta({
+  title: "Star Citizen Australia & New Zealand",
+  description:
+    "Join SCANZ, a mature and casual Star Citizen community for Australia and New Zealand players. Find crew, join events, and play your way.",
+  ogTitle: "SCANZ - Star Citizen Australia & New Zealand",
+  ogDescription:
+    "A mature, casual Star Citizen community for ANZ players, open to every experience level and playstyle.",
+  ogImage: "/who-is-scanz.png",
+  twitterCard: "summary_large_image",
+});
+</script>
+
 <style scoped>
 .home-page {
   min-height: 100%;

@@ -9,10 +9,23 @@
         src="/scan-news-information-propaganda.png"
         alt="SNIP - SCANZ News Information and Propaganda"
       />
-      <p class="coming-soon">Comming Soon</p>
+      <p class="coming-soon">Coming Soon</p>
     </section>
   </main>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: "SNIP",
+  description:
+    "SNIP is the home of SCANZ news, information, and propaganda for the Star Citizen Australia & New Zealand community.",
+  ogTitle: "SNIP - SCANZ News, Information & Propaganda",
+  ogDescription:
+    "News, information, and propaganda from the SCANZ Star Citizen community.",
+  ogImage: "/scan-news-information-propaganda.png",
+  twitterCard: "summary_large_image",
+});
+</script>
 
 <style scoped>
 .snip-page {

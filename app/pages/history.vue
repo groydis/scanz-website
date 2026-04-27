@@ -176,6 +176,19 @@
   </main>
 </template>
 
+<script setup lang="ts">
+useSeoMeta({
+  title: "History",
+  description:
+    "Read the story of SCANZ, from a small Star Citizen Discord to a growing Australia and New Zealand community built on organised chaos.",
+  ogTitle: "The History of SCANZ",
+  ogDescription:
+    "How SCANZ grew from a few Star Citizen players into a welcoming ANZ community.",
+  ogImage: "/scanz-is-freedom.png",
+  twitterCard: "summary_large_image",
+});
+</script>
+
 <style scoped>
 .history-page {
   min-height: 100%;

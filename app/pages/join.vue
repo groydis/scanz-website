@@ -119,6 +119,19 @@
   </main>
 </template>
 
+<script setup lang="ts">
+useSeoMeta({
+  title: "How to Join",
+  description:
+    "Join SCANZ by jumping into Discord and applying through the RSI organisation page. New and experienced Star Citizen players are welcome.",
+  ogTitle: "How to Join SCANZ",
+  ogDescription:
+    "Start with the SCANZ Discord, then apply through RSI to join the Star Citizen Australia & New Zealand community.",
+  ogImage: "/logo.png",
+  twitterCard: "summary_large_image",
+});
+</script>
+
 <style scoped>
 .join-page {
   min-height: 100%;
