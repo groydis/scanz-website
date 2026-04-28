@@ -1,18 +1,16 @@
 <template>
   <main class="snip-page">
-    <section class="snip-hero container" aria-labelledby="snip-title">
-      <img
-        class="snip-image"
-        src="/scan-news-information-propaganda.png"
-        alt="SNIP broadcast graphic for SCANZ news updates"
-      />
-      <h1 id="snip-title" class="snip-h1">SNIP</h1>
-      <p class="snip-intro">
-        SCANZ News, Information &amp; Propaganda — updates, guides, event
-        recaps, and community stories from our Star Citizen Australia &amp; New
-        Zealand crew.
+    <PageHero
+      title-id="snip-title"
+      eyebrow="SCANZ News, Information &amp; Propaganda"
+      title="SNIP"
+      section-class="snip-hero container"
+    >
+      <p>
+        Updates, guides, event recaps, and community stories from our Star
+        Citizen Australia &amp; New Zealand crew.
       </p>
-    </section>
+    </PageHero>
 
     <section class="snip-list-wrap container" aria-label="SNIP articles">
       <ul class="snip-cards">
@@ -88,47 +86,13 @@ useScanzSeo({
 
 <style scoped>
 .snip-page {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: calc(100vh - 72px);
+  min-height: 100%;
   padding: 5rem 1.5rem 6rem;
   background: var(--color-bg);
 }
 
-.snip-hero {
-  width: min(100%, 900px);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.snip-image {
-  display: block;
-  width: min(100%, 960px);
-  height: auto;
-  margin: 0 auto;
-  box-shadow: 0 24px 60px rgb(0 0 0 / 24%);
-}
-
-.snip-h1 {
-  margin-top: 2rem;
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  line-height: 0.95;
-  letter-spacing: 0.035em;
-}
-
-.snip-intro {
-  max-width: 760px;
-  margin: 1.25rem auto 0;
-  color: var(--color-text);
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  line-height: 1.65;
-  opacity: 0.9;
-}
-
 .snip-list-wrap {
-  margin-top: 3.5rem;
+  margin-top: 4rem;
 }
 
 .snip-cards {
@@ -211,9 +175,8 @@ useScanzSeo({
   text-decoration: underline;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   .snip-page {
-    min-height: calc(100vh - 164px);
     padding: 3.5rem 1.25rem 5rem;
   }
 
