@@ -19,14 +19,7 @@
         <h2>Join Discord</h2>
         <p>
           Jump into our
-          <a
-            class="text-link"
-            href="https://discord.gg/3atj8pjhFH"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Discord
-          </a>
+          <ScanzTextLink :to="DISCORD_INVITE_URL">Discord</ScanzTextLink>
           and say hello.
         </p>
         <p>This is where we:</p>
@@ -44,13 +37,8 @@
         <h2>Apply via RSI</h2>
         <p>
           Once you're ready, submit an application through our
-          <a
-            class="text-link"
-            href="https://robertsspaceindustries.com/en/orgs/scanz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            RSI organisation page</a
+          <ScanzTextLink :to="RSI_ORG_URL"
+            >RSI organisation page</ScanzTextLink
           >.
         </p>
         <p>
@@ -110,31 +98,31 @@
       </div>
     </section>
 
-    <section class="ready-cta" aria-labelledby="ready-title">
-      <h2 id="ready-title">Ready to Join?</h2>
-      <div class="cta-actions" aria-label="Join SCANZ">
-        <a
-          class="button button-primary"
-          href="https://discord.gg/3atj8pjhFH"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Join Discord
-        </a>
-        <a
-          class="button button-secondary"
-          href="https://robertsspaceindustries.com/en/orgs/scanz"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Apply on RSI
-        </a>
-      </div>
+    <section class="join-link-card" aria-label="Learn more about SCANZ">
+      <p>
+        Still deciding?
+        <ScanzTextLink to="/about">Learn more about SCANZ</ScanzTextLink>
+        or
+        <ScanzTextLink to="/history">read the history</ScanzTextLink>
+        of how the community grew.
+      </p>
     </section>
+
+    <ScanzCta
+      eyebrow="Ready to join?"
+      title="Start With Discord"
+      body="Join the Discord first, then apply through RSI when you are ready. If your Discord and in-game names differ, include both in your application."
+      primary-label="Join Discord"
+      :primary-href="DISCORD_INVITE_URL"
+      secondary-label="Apply via RSI"
+      :secondary-href="RSI_ORG_URL"
+    />
   </main>
 </template>
 
 <script setup lang="ts">
+import { DISCORD_INVITE_URL, RSI_ORG_URL } from "../constants/links";
+
 const faqItems = [
   {
     question: "Do I need to be experienced in Star Citizen to join?",
@@ -232,6 +220,7 @@ useHead({
 .join-hero,
 .join-content,
 .join-faq,
+.join-link-card,
 .ready-cta {
   width: min(100%, 900px);
   margin: 0 auto;
@@ -366,6 +355,21 @@ useHead({
   opacity: 0.9;
 }
 
+.join-link-card {
+  margin-top: 1.25rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  background: rgb(255 255 255 / 4%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  text-align: center;
+}
+
+.join-link-card p {
+  color: var(--color-text);
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  line-height: 1.65;
+  opacity: 0.9;
+}
+
 .text-link {
   color: var(--color-accent);
   font-weight: 800;
@@ -460,6 +464,7 @@ useHead({
 
   .join-content,
   .join-faq,
+  .join-link-card,
   .ready-cta {
     margin-top: 3rem;
   }

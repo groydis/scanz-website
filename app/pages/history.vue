@@ -82,6 +82,13 @@
           </ul>
           <p>But now, those disasters had witnesses.</p>
           <p>And that made them better.</p>
+          <p>
+            This is the kind of gameplay SCANZ is built on. If that sounds like
+            your thing,
+            <ScanzTextLink to="/join"
+              >join our Star Citizen ANZ community</ScanzTextLink
+            >.
+          </p>
         </div>
       </article>
 
@@ -173,10 +180,22 @@
       <p>And so far...</p>
       <p class="closing-line">It's working.</p>
     </section>
+
+    <ScanzCta
+      eyebrow="Be part of the next chapter"
+      title="Make the Next Story Yours"
+      body="SCANZ is still growing, and the best stories are the ones we have not made yet. Join the crew and get involved."
+      primary-label="Join Discord"
+      :primary-href="DISCORD_INVITE_URL"
+      secondary-label="Apply via RSI"
+      :secondary-href="RSI_ORG_URL"
+    />
   </main>
 </template>
 
 <script setup lang="ts">
+import { DISCORD_INVITE_URL, RSI_ORG_URL } from "../constants/links";
+
 useSeoMeta({
   title: "History of SCANZ – ANZ Star Citizen Community Origins",
   description:

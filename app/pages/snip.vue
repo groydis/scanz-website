@@ -11,10 +11,22 @@
       />
       <p class="coming-soon">Coming Soon</p>
     </section>
+
+    <ScanzCta
+      eyebrow="While SNIP spins up"
+      title="Come Fly With Us"
+      body="News and recaps are coming. For now, join the Discord and see what SCANZ is doing in the verse."
+      primary-label="Join Discord"
+      :primary-href="DISCORD_INVITE_URL"
+      secondary-label="How to Join SCANZ"
+      secondary-href="/join"
+    />
   </main>
 </template>
 
 <script setup lang="ts">
+import { DISCORD_INVITE_URL } from "../constants/links";
+
 useSeoMeta({
   title: "SCANZ News & Updates – Star Citizen ANZ Insights",
   description:
@@ -31,6 +43,7 @@ useSeoMeta({
 .snip-page {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   min-height: calc(100vh - 72px);
   padding: 5rem 1.5rem 6rem;

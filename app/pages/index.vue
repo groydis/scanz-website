@@ -11,7 +11,7 @@
         <div class="hero-actions" aria-label="Community links">
           <a
             class="button button-primary"
-            href="https://robertsspaceindustries.com/en/orgs/scanz"
+            :href="RSI_ORG_URL"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -19,7 +19,7 @@
           </a>
           <a
             class="button button-secondary"
-            href="https://discord.gg/3atj8pjhFH"
+            :href="DISCORD_INVITE_URL"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -37,7 +37,9 @@
           Citizen community based in Australia and New Zealand, but open to
           players everywhere. We're all about creating a friendly, inclusive
           space where everyone can enjoy the game, no matter their experience
-          level.
+          level. You can
+          <ScanzTextLink to="/about">learn more about SCANZ</ScanzTextLink>
+          before jumping in.
         </p>
         <img
           class="section-image section-image-right"
@@ -52,8 +54,13 @@
         <p>
           Whether you're into intense PvP or laid-back exploration,
           <span class="accent-text">SCANZ</span> offers a place to connect with
-          like-minded players and have a great time in the 'verse. Join us and
-          be part of a community that values camaraderie and fun above all else!
+          like-minded players and have a great time in the 'verse. You can
+          <ScanzTextLink to="/join"
+            >join our Star Citizen Australia &amp; New Zealand
+            community</ScanzTextLink
+          >
+          and be part of a community that values camaraderie and fun above all
+          else!
         </p>
         <img
           class="section-image section-image-full"
@@ -76,7 +83,10 @@
         </p>
         <p>
           The benefits are seriously amazing: less paperwork, more action;
-          fewer briefings, more good times.
+          fewer briefings, more good times. If you want the longer version,
+          <ScanzTextLink to="/history"
+            >read the history of SCANZ</ScanzTextLink
+          >.
         </p>
         <img
           class="section-image section-image-center"
@@ -89,30 +99,16 @@
         </p>
       </div>
     </section>
-    <section class="final-cta" aria-labelledby="final-cta-title">
-      <div class="section-content">
-        <h2 id="final-cta-title">This Sounds Mint!</h2>
-        <p>What are you waiting for then?</p>
-        <div class="hero-actions" aria-label="Join SCANZ">
-          <a
-            class="button button-primary"
-            href="https://robertsspaceindustries.com/en/orgs/scanz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Join the RSI Org
-          </a>
-          <a
-            class="button button-secondary"
-            href="https://discord.gg/3atj8pjhFH"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Join Discord
-          </a>
-        </div>
-      </div>
-    </section>
+    <ScanzCta
+      class="home-cta"
+      eyebrow="Ready to fly?"
+      title="Join SCANZ"
+      body="Looking for a Star Citizen community in Australia or New Zealand? Join the Discord, meet the crew, and start flying with us."
+      primary-label="Join Discord"
+      :primary-href="DISCORD_INVITE_URL"
+      secondary-label="How to Join SCANZ"
+      secondary-href="/join"
+    />
     <img
       class="bottom-image"
       src="/who-is-scanz.png"
@@ -122,7 +118,7 @@
 </template>
 
 <script setup lang="ts">
-const discordInviteUrl = "https://discord.gg/3atj8pjhFH";
+import { DISCORD_INVITE_URL, RSI_ORG_URL } from "../constants/links";
 
 useSeoMeta({
   title: "SCANZ – Star Citizen Australia & New Zealand Community",
@@ -155,8 +151,8 @@ const organizationSchema = {
     },
   ],
   sameAs: [
-    "https://robertsspaceindustries.com/en/orgs/scanz",
-    discordInviteUrl,
+    RSI_ORG_URL,
+    DISCORD_INVITE_URL,
   ],
 };
 
@@ -271,9 +267,12 @@ useHead({
 
 .about,
 .play,
-.why-join,
-.final-cta {
+.why-join {
   padding: 0 1.5rem 6rem;
+}
+
+.home-cta {
+  margin-bottom: 6rem;
 }
 
 .section-content {
@@ -341,8 +340,7 @@ useHead({
   .hero,
   .about,
   .play,
-  .why-join,
-  .final-cta {
+  .why-join {
     padding-inline: 1.25rem;
   }
 

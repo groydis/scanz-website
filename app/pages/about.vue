@@ -80,8 +80,9 @@
         <p>
           If you've ever joined an org and found it empty when you log in, this
           fixes that. Start here to
-          <NuxtLink class="text-link" to="/join"
-            >join our Australian Star Citizen org</NuxtLink>.
+          <ScanzTextLink to="/join"
+            >join our Australian Star Citizen org</ScanzTextLink
+          >.
         </p>
       </article>
 
@@ -97,8 +98,10 @@
         <p>
           It's less about structure, more about having a reliable crew ready to
           jump in. You can also
-          <NuxtLink class="text-link" to="/history"
-            >learn how SCANZ grew into an ANZ Star Citizen community</NuxtLink>.
+          <ScanzTextLink to="/history"
+            >learn how SCANZ grew into an ANZ Star Citizen
+            community</ScanzTextLink
+          >.
         </p>
       </article>
 
@@ -147,31 +150,23 @@
         </p>
       </article>
 
-      <article class="about-card final-card">
-        <h2>Ready to Fly With Us?</h2>
-        <p>
-          If SCANZ sounds like your kind of crew, jump into Discord and come say
-          hi. No pressure: just join in and see if it feels right.
-        </p>
-        <div class="cta-actions" aria-label="Join SCANZ">
-          <a
-            class="button button-primary"
-            href="https://discord.gg/3atj8pjhFH"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Join Discord
-          </a>
-          <NuxtLink class="button button-secondary" to="/join">
-            How to Join SCANZ
-          </NuxtLink>
-        </div>
-      </article>
+      <ScanzCta
+        variant="compact"
+        eyebrow="Your kind of crew?"
+        title="Ready to Fly With Us?"
+        body="If SCANZ sounds like your kind of crew, jump into Discord and come say hi. No pressure — just see if it feels right."
+        primary-label="Join Discord"
+        :primary-href="DISCORD_INVITE_URL"
+        secondary-label="How to Join SCANZ"
+        secondary-href="/join"
+      />
     </section>
   </main>
 </template>
 
 <script setup lang="ts">
+import { DISCORD_INVITE_URL } from "../constants/links";
+
 useSeoMeta({
   title: "About SCANZ – Australian & NZ Star Citizen Organisation",
   description:
