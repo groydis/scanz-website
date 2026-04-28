@@ -95,6 +95,21 @@
       </article>
     </section>
 
+    <section class="join-faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <article
+          v-for="item in faqItems"
+          :key="item.question"
+          class="faq-item"
+        >
+          <h3>{{ item.question }}</h3>
+          <p>{{ item.answer }}</p>
+        </article>
+      </div>
+    </section>
+
     <section class="ready-cta" aria-labelledby="ready-title">
       <h2 id="ready-title">Ready to Join?</h2>
       <div class="cta-actions" aria-label="Join SCANZ">
@@ -120,6 +135,72 @@
 </template>
 
 <script setup lang="ts">
+const faqItems = [
+  {
+    question: "Do I need to be experienced in Star Citizen to join?",
+    answer:
+      "Not at all. SCANZ welcomes new and experienced players. If you're still learning the basics, we'll help you get set up, find people to fly with, and join group activities from day one.",
+  },
+  {
+    question: "Do I need to own a specific ship?",
+    answer:
+      "Nope. Fly what you've got. A lot of Star Citizen content works better with a crew, so you'll often be flying alongside others or joining multicrew ships anyway.",
+  },
+  {
+    question: "What time do you usually play?",
+    answer:
+      "SCANZ is primarily an Australia and New Zealand community, so most activity happens during AU/NZ evenings and weekends, around AEST and NZST time zones.",
+  },
+  {
+    question: "What kind of gameplay does SCANZ do?",
+    answer:
+      "Pretty much everything: combat, mining, hauling, salvage, exploration, events, rescue runs, and whatever chaos the latest Star Citizen patch allows.",
+  },
+  {
+    question: "Is SCANZ casual or hardcore?",
+    answer:
+      "We're casual-first. We run organised events and operations, but there are no mandatory ops, strict roles, or pressure to play a certain way.",
+  },
+  {
+    question: "Do I have to join the Discord?",
+    answer:
+      "You don't have to join Discord before applying, but we strongly recommend it. Discord is where we organise events, coordinate comms, help new players, and keep the community active.",
+  },
+  {
+    question: "How does joining SCANZ work?",
+    answer:
+      "Join the Discord, then apply through the official SCANZ RSI organisation page. If your Discord name is different from your in-game name, include both so we can match things up quickly.",
+  },
+  {
+    question: "Can I play with other groups too?",
+    answer:
+      "Yes. SCANZ does not control who you fly with or how you play. The simple rule is: don't knowingly attack SCANZ members. If mistakes happen, talk to an officer and sort it out.",
+  },
+  {
+    question: "Is SCANZ only for Australia and New Zealand players?",
+    answer:
+      "No. SCANZ is based around Australian and New Zealand time zones, but players from anywhere are welcome if our community and play times work for them.",
+  },
+  {
+    question: "What happens after I join?",
+    answer:
+      "Once approved, you'll get full Discord access, meet the crew, and can jump into events or casual gameplay. We also provide onboarding guidance so new members can get involved quickly.",
+  },
+] as const;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 useSeoMeta({
   title: "How to Join SCANZ – Star Citizen ANZ Community",
   description:
@@ -129,6 +210,15 @@ useSeoMeta({
     "Start with the SCANZ Discord, then apply through RSI to join the Star Citizen Australia & New Zealand community.",
   ogImage: "/logo.png",
   twitterCard: "summary_large_image",
+});
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify(faqSchema),
+    },
+  ],
 });
 </script>
 
@@ -141,6 +231,7 @@ useSeoMeta({
 
 .join-hero,
 .join-content,
+.join-faq,
 .ready-cta {
   width: min(100%, 900px);
   margin: 0 auto;
@@ -238,6 +329,43 @@ useSeoMeta({
   color: var(--color-accent);
 }
 
+.join-faq {
+  margin-top: 4rem;
+}
+
+.join-faq h2 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: 0.035em;
+  text-align: center;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  background: rgb(255 255 255 / 4%);
+  border: 1px solid rgb(255 255 255 / 10%);
+}
+
+.faq-item h3 {
+  color: var(--color-accent);
+  font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+  line-height: 1.25;
+}
+
+.faq-item p {
+  margin-top: 0.75rem;
+  color: var(--color-text);
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  line-height: 1.65;
+  opacity: 0.9;
+}
+
 .text-link {
   color: var(--color-accent);
   font-weight: 800;
@@ -331,6 +459,7 @@ useSeoMeta({
   }
 
   .join-content,
+  .join-faq,
   .ready-cta {
     margin-top: 3rem;
   }
