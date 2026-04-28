@@ -160,7 +160,7 @@ useHead({
   script: [
     {
       type: "application/ld+json",
-      children: JSON.stringify(organizationSchema),
+      innerHTML: JSON.stringify(organizationSchema),
     },
   ],
 });

@@ -207,7 +207,7 @@ useHead({
   script: [
     {
       type: "application/ld+json",
-      children: JSON.stringify(faqSchema),
+      innerHTML: JSON.stringify(faqSchema),
     },
   ],
 });

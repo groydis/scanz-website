@@ -9,8 +9,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'SCANZ – Star Citizen Australia & New Zealand Community',
-      titleTemplate: (titleChunk) =>
-        titleChunk || 'SCANZ – Star Citizen Australia & New Zealand Community',
       htmlAttrs: {
         lang: 'en-AU',
       },
