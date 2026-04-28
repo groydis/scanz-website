@@ -18,7 +18,7 @@
 useSeoMeta({
   title: "SCANZ News & Updates – Star Citizen ANZ Insights",
   description:
-    "SNIP is the home of SCANZ news, information, and propaganda for the Star Citizen Australia & New Zealand community.",
+    "Stay updated with SCANZ news, events, and Star Citizen updates for Australia & New Zealand players. See what the crew’s been up to.",
   ogTitle: "SNIP - SCANZ News, Information & Propaganda",
   ogDescription:
     "News, information, and propaganda from the SCANZ Star Citizen community.",

@@ -147,7 +147,7 @@
 useSeoMeta({
   title: "About SCANZ – Australian & NZ Star Citizen Organisation",
   description:
-    "Learn about SCANZ, a community-first Star Citizen organisation for Australia and New Zealand players built around respect, teamwork, and all playstyles.",
+    "Learn about SCANZ, a laid-back Star Citizen organisation for Australian & New Zealand players. Community-first, no ego, all playstyles welcome.",
   ogTitle: "About SCANZ",
   ogDescription:
     "SCANZ is a community-first Star Citizen organisation where players can enjoy the game their way.",

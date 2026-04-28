@@ -16,11 +16,6 @@ export default defineNuxtConfig({
       },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          name: 'description',
-          content:
-            'SCANZ is a casual Star Citizen community for Australia and New Zealand players, welcoming new and veteran pilots across every playstyle.',
-        },
         { name: 'theme-color', content: '#f54d14' },
         { property: 'og:site_name', content: 'SCANZ' },
         { property: 'og:type', content: 'website' },

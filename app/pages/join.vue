@@ -123,7 +123,7 @@
 useSeoMeta({
   title: "How to Join SCANZ – Star Citizen ANZ Community",
   description:
-    "Join SCANZ by jumping into Discord and applying through the RSI organisation page. New and experienced Star Citizen players are welcome.",
+    "Looking for a Star Citizen org in Australia or New Zealand? Join our Discord, apply via RSI, and start flying with SCANZ today.",
   ogTitle: "How to Join SCANZ",
   ogDescription:
     "Start with the SCANZ Discord, then apply through RSI to join the Star Citizen Australia & New Zealand community.",

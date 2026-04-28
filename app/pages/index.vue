@@ -121,7 +121,7 @@
 useSeoMeta({
   title: "SCANZ – Star Citizen Australia & New Zealand Community",
   description:
-    "Join SCANZ, a mature and casual Star Citizen community for Australia and New Zealand players. Find crew, join events, and play your way.",
+    "Join SCANZ, the Star Citizen community for Australia & New Zealand players. Fly with a relaxed, social crew—new and experienced pilots welcome.",
   ogTitle: "SCANZ - Star Citizen Australia & New Zealand",
   ogDescription:
     "A mature, casual Star Citizen community for ANZ players, open to every experience level and playstyle.",

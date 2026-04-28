@@ -180,7 +180,7 @@
 useSeoMeta({
   title: "History of SCANZ – ANZ Star Citizen Community Origins",
   description:
-    "Read the story of SCANZ, from a small Star Citizen Discord to a growing Australia and New Zealand community built on organised chaos.",
+    "Discover the story of SCANZ, from a small ANZ crew to a growing Star Citizen community running events, ops, and casual gameplay.",
   ogTitle: "The History of SCANZ",
   ogDescription:
     "How SCANZ grew from a few Star Citizen players into a welcoming ANZ community.",
