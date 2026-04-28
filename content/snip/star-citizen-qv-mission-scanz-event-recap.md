@@ -2,7 +2,7 @@
 title: "Star Citizen QV Mission Report (SCANZ ANZ Event Recap — Shenaniscanz Edition)"
 description: "A chaotic Star Citizen QV mission recap from an ANZ community, featuring explosions, broken elevators, space bikes, and classic SCANZ group gameplay."
 date: "2026-04-28"
-author: "SCANZ"
+author: "Grinnah"
 category: "Events"
 tags:
   - Star Citizen
