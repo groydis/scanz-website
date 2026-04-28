@@ -1,6 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+/** When true, @nuxt/content uses `node:sqlite` and skips the better-sqlite3 auto-install prompt (avoids TTY errors in non-interactive environments). */
+function nuxtContentCanUseNodeSqlite(): boolean {
+  try {
+    return Boolean(
+      (process as NodeJS.Process & { getBuiltinModule?: (id: string) => unknown })
+        .getBuiltinModule?.('node:sqlite'),
+    )
+  } catch {
+    return false
+  }
+}
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
+  modules: ['@nuxt/content'],
+  content: {
+    experimental: nuxtContentCanUseNodeSqlite() ? { nativeSqlite: true } : {},
+  },
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
   typescript: {

@@ -99,6 +99,31 @@
         </p>
       </div>
     </section>
+    <section
+      v-if="latestSnipPosts?.length"
+      class="snip-latest"
+      aria-labelledby="snip-latest-title"
+    >
+      <div class="section-content container-narrow">
+        <h2 id="snip-latest-title">Latest from SNIP</h2>
+        <ul class="snip-latest-list">
+          <li
+            v-for="post in latestSnipPosts"
+            :key="snipPostPath(post)"
+            class="snip-latest-card surface-card"
+          >
+            <h3 class="snip-latest-card-title">{{ post.title }}</h3>
+            <p class="snip-latest-card-desc">{{ post.description }}</p>
+            <NuxtLink class="snip-latest-read" :to="snipPostPath(post)">
+              Read post
+            </NuxtLink>
+          </li>
+        </ul>
+        <p class="snip-latest-more">
+          <ScanzTextLink to="/snip">More on SNIP</ScanzTextLink>
+        </p>
+      </div>
+    </section>
     <ScanzCta
       class="home-cta"
       eyebrow="Ready to fly?"
@@ -119,6 +144,10 @@
 
 <script setup lang="ts">
 import { DISCORD_INVITE_URL, RSI_ORG_URL } from "../constants/links";
+
+const { data: latestSnipPosts } = await useAsyncData("home-snip-latest", () =>
+  queryCollection("snip").order("date", "DESC").limit(3).all(),
+);
 
 useScanzSeo({
   title: "SCANZ – Star Citizen Australia & New Zealand Community",
@@ -226,6 +255,64 @@ useHead({
   padding: 0 1.5rem 6rem;
 }
 
+.snip-latest {
+  padding: 0 1.5rem 5rem;
+}
+
+.snip-latest h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: 0.035em;
+  text-align: center;
+}
+
+.snip-latest-list {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.snip-latest-card {
+  text-align: left;
+}
+
+.snip-latest-card-title {
+  margin: 0;
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  color: var(--color-accent);
+  line-height: 1.2;
+}
+
+.snip-latest-card-desc {
+  margin-top: 0.65rem;
+  font-size: clamp(0.98rem, 1.8vw, 1.1rem);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.snip-latest-read {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-accent);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.snip-latest-read:hover,
+.snip-latest-read:focus-visible {
+  text-decoration: underline;
+}
+
+.snip-latest-more {
+  margin-top: 1.75rem;
+  text-align: center;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
 .home-cta {
   margin-bottom: 6rem;
 }
@@ -289,7 +376,8 @@ useHead({
   .hero,
   .about,
   .play,
-  .why-join {
+  .why-join,
+  .snip-latest {
     padding-inline: 1.25rem;
   }
 
