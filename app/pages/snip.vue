@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "SNIP",
+  title: "SCANZ News & Updates – Star Citizen ANZ Insights",
   description:
     "SNIP is the home of SCANZ news, information, and propaganda for the Star Citizen Australia & New Zealand community.",
   ogTitle: "SNIP - SCANZ News, Information & Propaganda",

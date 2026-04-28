@@ -121,7 +121,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "How to Join",
+  title: "How to Join SCANZ – Star Citizen ANZ Community",
   description:
     "Join SCANZ by jumping into Discord and applying through the RSI organisation page. New and experienced Star Citizen players are welcome.",
   ogTitle: "How to Join SCANZ",

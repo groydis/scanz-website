@@ -145,7 +145,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "About",
+  title: "About SCANZ – Australian & NZ Star Citizen Organisation",
   description:
     "Learn about SCANZ, a community-first Star Citizen organisation for Australia and New Zealand players built around respect, teamwork, and all playstyles.",
   ogTitle: "About SCANZ",

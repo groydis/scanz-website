@@ -119,7 +119,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "Star Citizen Australia & New Zealand",
+  title: "SCANZ – Star Citizen Australia & New Zealand Community",
   description:
     "Join SCANZ, a mature and casual Star Citizen community for Australia and New Zealand players. Find crew, join events, and play your way.",
   ogTitle: "SCANZ - Star Citizen Australia & New Zealand",

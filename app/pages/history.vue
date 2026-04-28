@@ -178,7 +178,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "History",
+  title: "History of SCANZ – ANZ Star Citizen Community Origins",
   description:
     "Read the story of SCANZ, from a small Star Citizen Discord to a growing Australia and New Zealand community built on organised chaos.",
   ogTitle: "The History of SCANZ",
