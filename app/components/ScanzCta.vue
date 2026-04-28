@@ -4,31 +4,31 @@
     <h2>{{ title }}</h2>
     <p class="scanz-cta-body">{{ body }}</p>
 
-    <div class="hero-actions" aria-label="Next steps">
+    <div class="hero-actions btn-row" aria-label="Next steps">
       <a
         v-if="isExternal(primaryHref)"
-        class="button button-primary"
+        class="btn btn-primary"
         :href="primaryHref"
         target="_blank"
         rel="noopener noreferrer"
       >
         {{ primaryLabel }}
       </a>
-      <NuxtLink v-else class="button button-primary" :to="primaryHref">
+      <NuxtLink v-else class="btn btn-primary" :to="primaryHref">
         {{ primaryLabel }}
       </NuxtLink>
 
       <template v-if="secondaryLabel && secondaryHref">
         <a
           v-if="isExternal(secondaryHref)"
-          class="button button-secondary"
+          class="btn btn-secondary"
           :href="secondaryHref"
           target="_blank"
           rel="noopener noreferrer"
         >
           {{ secondaryLabel }}
         </a>
-        <NuxtLink v-else class="button button-secondary" :to="secondaryHref">
+        <NuxtLink v-else class="btn btn-secondary" :to="secondaryHref">
           {{ secondaryLabel }}
         </NuxtLink>
       </template>
@@ -99,70 +99,6 @@ const isExternal = (href: string) => href.startsWith("http");
 }
 
 .hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.875rem;
   margin-top: 1.5rem;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 180px;
-  min-height: 48px;
-  padding: 0.85rem 1.25rem;
-  border: 1px solid var(--color-accent);
-  border-radius: 999px;
-  color: var(--color-text);
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1;
-  text-decoration: none;
-  transition:
-    background-color 160ms ease,
-    border-color 160ms ease,
-    transform 160ms ease;
-}
-
-.button:hover,
-.button:focus-visible {
-  transform: translateY(-2px);
-}
-
-.button:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
-}
-
-.button-primary {
-  background: var(--color-accent);
-}
-
-.button-primary:hover,
-.button-primary:focus-visible {
-  background: #ff6a35;
-  border-color: #ff6a35;
-}
-
-.button-secondary {
-  background: rgb(0 0 0 / 12%);
-}
-
-.button-secondary:hover,
-.button-secondary:focus-visible {
-  background: var(--color-accent);
-}
-
-@media (max-width: 640px) {
-  .hero-actions {
-    align-items: stretch;
-    flex-direction: column;
-  }
-
-  .button {
-    width: 100%;
-  }
 }
 </style>

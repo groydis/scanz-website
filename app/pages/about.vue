@@ -1,8 +1,11 @@
 <template>
   <main class="about-page">
-    <section class="about-hero" aria-labelledby="about-title">
-      <p class="eyebrow">About SCANZ</p>
-      <h1 id="about-title">People come first. The org comes second.</h1>
+    <PageHero
+      title-id="about-title"
+      eyebrow="About SCANZ"
+      title="People come first. The org comes second."
+      section-class="about-hero container"
+    >
       <p>
         <strong>Star Citizen Australia &amp; New Zealand (SCANZ)</strong> is a
         community-first organisation built around one simple idea.
@@ -11,10 +14,10 @@
         We're here to create a space where players can enjoy Star Citizen their
         way, without pressure, without ego, and without being told how to play.
       </p>
-    </section>
+    </PageHero>
 
-    <section class="about-content" aria-label="About SCANZ details">
-      <article class="about-card">
+    <section class="about-content container" aria-label="About SCANZ details">
+      <article class="about-card surface-card content-prose">
         <h2>Who We Are</h2>
         <p>
           SCANZ is a Star Citizen community built around one simple idea:
@@ -30,7 +33,7 @@
         </p>
       </article>
 
-      <article class="about-card">
+      <article class="about-card surface-card content-prose">
         <h2>Our Values</h2>
         <div class="feature-grid">
           <div class="feature-item">
@@ -68,7 +71,7 @@
         </div>
       </article>
 
-      <article class="about-card about-card-accent">
+      <article class="about-card about-card-accent surface-card surface-card-accent content-prose">
         <h2>Why Join an Australian Star Citizen Org</h2>
         <p>Playing in the right timezone changes everything.</p>
         <p>
@@ -86,7 +89,7 @@
         </p>
       </article>
 
-      <article class="about-card">
+      <article class="about-card surface-card content-prose">
         <h2>Benefits of a New Zealand &amp; Australian Star Citizen Guild</h2>
         <p>
           Being part of an ANZ-focused Star Citizen community like SCANZ means
@@ -105,7 +108,7 @@
         </p>
       </article>
 
-      <article class="about-card">
+      <article class="about-card surface-card content-prose">
         <h2>Leadership &amp; Structure</h2>
         <p>
           SCANZ is run by a small group of officers and custodians who keep
@@ -121,7 +124,7 @@
         </p>
       </article>
 
-      <article class="about-card">
+      <article class="about-card surface-card content-prose">
         <h2>What Makes SCANZ Different</h2>
         <p>A lot of Star Citizen orgs focus on structure, roles, and control.</p>
         <p>We don't.</p>
@@ -136,7 +139,7 @@
         </p>
       </article>
 
-      <article class="about-card">
+      <article class="about-card surface-card content-prose">
         <h2>Who SCANZ Is For</h2>
         <p>
           You'll fit in here if you want people to play with consistently, enjoy
@@ -167,7 +170,7 @@
 <script setup lang="ts">
 import { DISCORD_INVITE_URL } from "../constants/links";
 
-useSeoMeta({
+useScanzSeo({
   title: "About SCANZ – Australian & NZ Star Citizen Organisation",
   description:
     "Learn about SCANZ, a laid-back Star Citizen organisation for Australian & New Zealand players. Community-first, no ego, all playstyles welcome.",
@@ -186,41 +189,6 @@ useSeoMeta({
   background: var(--color-bg);
 }
 
-.about-hero,
-.about-content {
-  width: min(100%, 900px);
-  margin: 0 auto;
-}
-
-.about-hero {
-  text-align: center;
-}
-
-.eyebrow {
-  margin-bottom: 0.75rem;
-  color: var(--color-accent);
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.about-hero h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  line-height: 0.95;
-  letter-spacing: 0.035em;
-  text-wrap: balance;
-}
-
-.about-hero p {
-  max-width: 760px;
-  margin: 1.25rem auto 0;
-  color: var(--color-text);
-  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
-  line-height: 1.65;
-  opacity: 0.9;
-}
-
 .about-hero strong,
 .accent-line,
 .closing-line {
@@ -233,13 +201,6 @@ useSeoMeta({
   margin-top: 4rem;
 }
 
-.about-card {
-  padding: clamp(1.5rem, 4vw, 2.25rem);
-  background: rgb(255 255 255 / 4%);
-  border: 1px solid rgb(255 255 255 / 10%);
-  box-shadow: 0 18px 45px rgb(0 0 0 / 14%);
-}
-
 .about-card-accent,
 .final-card {
   border-color: rgb(245 77 20 / 42%);
@@ -250,41 +211,6 @@ useSeoMeta({
   font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1;
   letter-spacing: 0.035em;
-}
-
-.about-card p,
-.about-card li {
-  color: var(--color-text);
-  font-size: clamp(1.02rem, 2vw, 1.2rem);
-  line-height: 1.7;
-  opacity: 0.9;
-}
-
-.about-card p {
-  margin-top: 1rem;
-}
-
-.about-card ul {
-  display: grid;
-  gap: 0.6rem;
-  margin: 1rem 0 0;
-  padding-left: 1.3rem;
-}
-
-.about-card li::marker {
-  color: var(--color-accent);
-}
-
-.text-link {
-  color: var(--color-accent);
-  font-weight: 800;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.2em;
-}
-
-.text-link:hover,
-.text-link:focus-visible {
-  color: #ff6a35;
 }
 
 .accent-line,
@@ -317,64 +243,6 @@ useSeoMeta({
   margin-top: 0.75rem;
 }
 
-.cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.875rem;
-  margin-top: 1.5rem;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 180px;
-  min-height: 48px;
-  padding: 0.85rem 1.25rem;
-  border: 1px solid var(--color-accent);
-  border-radius: 999px;
-  color: var(--color-text);
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1;
-  text-decoration: none;
-  transition:
-    background-color 160ms ease,
-    border-color 160ms ease,
-    transform 160ms ease;
-}
-
-.button:hover,
-.button:focus-visible {
-  transform: translateY(-2px);
-}
-
-.button:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
-}
-
-.button-primary {
-  background: var(--color-accent);
-}
-
-.button-primary:hover,
-.button-primary:focus-visible {
-  background: #ff6a35;
-  border-color: #ff6a35;
-}
-
-.button-secondary {
-  background: rgb(0 0 0 / 12%);
-  color: var(--color-text);
-}
-
-.button-secondary:hover,
-.button-secondary:focus-visible {
-  background: var(--color-accent);
-}
-
 @media (max-width: 700px) {
   .about-page {
     padding: 3.5rem 1.25rem 5rem;
@@ -386,15 +254,6 @@ useSeoMeta({
 
   .feature-grid {
     grid-template-columns: 1fr;
-  }
-
-  .cta-actions {
-    align-items: stretch;
-    flex-direction: column;
-  }
-
-  .button {
-    width: 100%;
   }
 }
 </style>

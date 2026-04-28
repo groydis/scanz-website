@@ -8,9 +8,9 @@
       />
       <div class="hero-copy">
         <h1 id="home-title">Star Citizen Australia &amp; New Zealand</h1>
-        <div class="hero-actions" aria-label="Community links">
+        <div class="hero-actions btn-row" aria-label="Community links">
           <a
-            class="button button-primary"
+            class="btn btn-primary"
             :href="RSI_ORG_URL"
             target="_blank"
             rel="noopener noreferrer"
@@ -18,7 +18,7 @@
             Join the RSI Org
           </a>
           <a
-            class="button button-secondary"
+            class="btn btn-secondary"
             :href="DISCORD_INVITE_URL"
             target="_blank"
             rel="noopener noreferrer"
@@ -30,7 +30,7 @@
       </div>
     </section>
     <section class="about" aria-labelledby="about-title">
-      <div class="section-content">
+      <div class="section-content container-narrow">
         <h2 id="about-title">Who are SCANZ?</h2>
         <p>
           <span class="accent-text">SCANZ</span> is a mature, casual Star
@@ -49,7 +49,7 @@
       </div>
     </section>
     <section class="play" aria-labelledby="play-title">
-      <div class="section-content">
+      <div class="section-content container-narrow">
         <h2 id="play-title">Play Your Way!</h2>
         <p>
           Whether you're into intense PvP or laid-back exploration,
@@ -70,7 +70,7 @@
       </div>
     </section>
     <section class="why-join" aria-labelledby="why-join-title">
-      <div class="section-content">
+      <div class="section-content container-narrow">
         <h2 id="why-join-title">Why Join?</h2>
         <p>
           Other orgs might run on the old "Command and Control" model, better
@@ -120,7 +120,7 @@
 <script setup lang="ts">
 import { DISCORD_INVITE_URL, RSI_ORG_URL } from "../constants/links";
 
-useSeoMeta({
+useScanzSeo({
   title: "SCANZ – Star Citizen Australia & New Zealand Community",
   description:
     "Join SCANZ, the Star Citizen community for Australia & New Zealand players. Fly with a relaxed, social crew—new and experienced pilots welcome.",
@@ -209,52 +209,7 @@ useHead({
 }
 
 .hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.875rem;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 180px;
-  min-height: 48px;
-  padding: 0.85rem 1.25rem;
-  border: 1px solid var(--color-accent);
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--color-text);
-  text-decoration: none;
-  transition:
-    background-color 160ms ease,
-    color 160ms ease,
-    transform 160ms ease,
-    border-color 160ms ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
-.button-primary {
-  background: var(--color-accent);
-}
-
-.button-primary:hover {
-  background: #ff6a35;
-  border-color: #ff6a35;
-}
-
-.button-secondary {
-  background: rgb(0 0 0 / 12%);
-}
-
-.button-secondary:hover {
-  background: var(--color-accent);
+  margin-top: 1.75rem;
 }
 
 .hero-copy p {
@@ -276,8 +231,6 @@ useHead({
 }
 
 .section-content {
-  width: min(100%, 780px);
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -297,10 +250,6 @@ useHead({
 
 .section-content p + p {
   margin-top: 1.25rem;
-}
-
-.section-content .hero-actions {
-  margin-top: 1.75rem;
 }
 
 .section-image {
@@ -353,12 +302,6 @@ useHead({
   }
 
   .hero-actions {
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .button {
     width: 100%;
   }
 }

@@ -1,13 +1,16 @@
 <template>
   <main class="history-page">
-    <section class="history-hero" aria-labelledby="history-title">
-      <p class="eyebrow">The History of SCANZ</p>
-      <h1 id="history-title">Every org has an origin story.</h1>
+    <PageHero
+      title-id="history-title"
+      eyebrow="The History of SCANZ"
+      title="Every org has an origin story."
+      section-class="history-hero container"
+    >
       <p>Ours wasn't planned.</p>
-    </section>
+    </PageHero>
 
-    <section class="timeline" aria-label="SCANZ history timeline">
-      <article class="timeline-card">
+    <section class="timeline container" aria-label="SCANZ history timeline">
+      <article class="timeline-card surface-card content-prose">
         <span class="timeline-marker">01</span>
         <div class="timeline-copy">
           <h2>The Beginning — "We should probably make a Discord"</h2>
@@ -27,7 +30,7 @@
         </div>
       </article>
 
-      <article class="timeline-card">
+      <article class="timeline-card surface-card content-prose">
         <span class="timeline-marker">02</span>
         <div class="timeline-copy">
           <h2>Early Days — Small Group, Big Ideas</h2>
@@ -44,7 +47,7 @@
         </div>
       </article>
 
-      <article class="timeline-card">
+      <article class="timeline-card surface-card content-prose">
         <span class="timeline-marker">03</span>
         <div class="timeline-copy">
           <h2>Growth — "Wait, people are actually joining?"</h2>
@@ -62,7 +65,7 @@
         </div>
       </article>
 
-      <article class="timeline-card timeline-card-accent">
+      <article class="timeline-card timeline-card-accent surface-card surface-card-accent content-prose">
         <span class="timeline-marker">04</span>
         <div class="timeline-copy">
           <h2>The Structure Era — Organised Chaos</h2>
@@ -92,7 +95,7 @@
         </div>
       </article>
 
-      <article class="timeline-card">
+      <article class="timeline-card surface-card content-prose">
         <span class="timeline-marker">05</span>
         <div class="timeline-copy">
           <h2>Patch Cycles &amp; Survival</h2>
@@ -112,7 +115,7 @@
         </div>
       </article>
 
-      <article class="timeline-card">
+      <article class="timeline-card surface-card content-prose">
         <span class="timeline-marker">06</span>
         <div class="timeline-copy">
           <h2>Community First — The Line We Don't Cross</h2>
@@ -126,7 +129,7 @@
         </div>
       </article>
 
-      <article class="timeline-card">
+      <article class="timeline-card surface-card content-prose">
         <span class="timeline-marker">07</span>
         <div class="timeline-copy">
           <h2>Today — What SCANZ Is Now</h2>
@@ -148,7 +151,7 @@
         </div>
       </article>
 
-      <article class="timeline-card">
+      <article class="timeline-card surface-card content-prose">
         <span class="timeline-marker">08</span>
         <div class="timeline-copy">
           <h2>The Real Story</h2>
@@ -165,7 +168,7 @@
       </article>
     </section>
 
-    <section class="next-card" aria-labelledby="next-title">
+    <section class="next-card container content-prose" aria-labelledby="next-title">
       <h2 id="next-title">What's Next?</h2>
       <p>Honestly?</p>
       <p>More of the same.</p>
@@ -196,7 +199,7 @@
 <script setup lang="ts">
 import { DISCORD_INVITE_URL, RSI_ORG_URL } from "../constants/links";
 
-useSeoMeta({
+useScanzSeo({
   title: "History of SCANZ – ANZ Star Citizen Community Origins",
   description:
     "Discover the story of SCANZ, from a small ANZ crew to a growing Star Citizen community running events, ops, and casual gameplay.",
@@ -215,42 +218,6 @@ useSeoMeta({
   background: var(--color-bg);
 }
 
-.history-hero,
-.timeline,
-.next-card {
-  width: min(100%, 900px);
-  margin: 0 auto;
-}
-
-.history-hero {
-  text-align: center;
-}
-
-.eyebrow {
-  margin-bottom: 0.75rem;
-  color: var(--color-accent);
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.history-hero h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  line-height: 0.95;
-  letter-spacing: 0.035em;
-  text-wrap: balance;
-}
-
-.history-hero p {
-  max-width: 760px;
-  margin: 1.25rem auto 0;
-  color: var(--color-text);
-  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
-  line-height: 1.65;
-  opacity: 0.9;
-}
-
 .timeline {
   display: grid;
   gap: 1.25rem;
@@ -262,10 +229,6 @@ useSeoMeta({
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1.25rem;
-  padding: clamp(1.5rem, 4vw, 2.25rem);
-  background: rgb(255 255 255 / 4%);
-  border: 1px solid rgb(255 255 255 / 10%);
-  box-shadow: 0 18px 45px rgb(0 0 0 / 14%);
 }
 
 .timeline-card-accent,
@@ -293,34 +256,6 @@ useSeoMeta({
   letter-spacing: 0.035em;
 }
 
-.timeline-copy p,
-.timeline-copy li,
-.next-card p,
-.next-card li {
-  color: var(--color-text);
-  font-size: clamp(1.02rem, 2vw, 1.2rem);
-  line-height: 1.7;
-  opacity: 0.9;
-}
-
-.timeline-copy p,
-.next-card p {
-  margin-top: 1rem;
-}
-
-.timeline-copy ul,
-.next-card ul {
-  display: grid;
-  gap: 0.6rem;
-  margin: 1rem 0 0;
-  padding-left: 1.3rem;
-}
-
-.timeline-copy li::marker,
-.next-card li::marker {
-  color: var(--color-accent);
-}
-
 .accent-line,
 .closing-line {
   color: var(--color-accent);
@@ -331,7 +266,6 @@ useSeoMeta({
 
 .next-card {
   margin-top: 4rem;
-  padding: clamp(1.5rem, 4vw, 2.25rem);
   border: 1px solid rgb(245 77 20 / 42%);
   box-shadow: 0 18px 45px rgb(0 0 0 / 14%);
 }

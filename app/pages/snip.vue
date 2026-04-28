@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import { DISCORD_INVITE_URL } from "../constants/links";
 
-useSeoMeta({
+useScanzSeo({
   title: "SCANZ News & Updates – Star Citizen ANZ Insights",
   description:
     "Stay updated with SCANZ news, events, and Star Citizen updates for Australia & New Zealand players. See what the crew’s been up to.",
