@@ -1,7 +1,11 @@
 <template>
   <header class="site-header">
     <NuxtLink class="brand-link" to="/" aria-label="SCANZ home">
-      <img class="brand-mark" src="/logo.png" alt="" />
+      <img
+        class="brand-mark"
+        src="/logo.png"
+        alt="SCANZ logo – Star Citizen Australia & New Zealand community"
+      />
       <span class="brand-text">SCANZ</span>
     </NuxtLink>
 

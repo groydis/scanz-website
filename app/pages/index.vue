@@ -1,7 +1,11 @@
 <template>
   <main class="home-page">
     <section class="hero" aria-labelledby="home-title">
-      <img class="hero-logo" src="/logo.png" alt="SCANZ" />
+      <img
+        class="hero-logo"
+        src="/logo.png"
+        alt="SCANZ logo – Star Citizen Australia & New Zealand community"
+      />
       <div class="hero-copy">
         <h1 id="home-title">Star Citizen Australia &amp; New Zealand</h1>
         <div class="hero-actions" aria-label="Community links">
@@ -38,7 +42,7 @@
         <img
           class="section-image section-image-right"
           src="/scanz-is-wow.png"
-          alt="SCANZ is wow"
+          alt="Person pointing to wow text for SCANZ community"
         />
       </div>
     </section>
@@ -54,7 +58,7 @@
         <img
           class="section-image section-image-full"
           src="/scanz-is-inclusive.png"
-          alt="SCANZ is inclusive"
+          alt="Diverse group representing SCANZ's inclusive community"
         />
       </div>
     </section>
@@ -77,7 +81,7 @@
         <img
           class="section-image section-image-center"
           src="/scanz-is-freedom.png"
-          alt="SCANZ is freedom"
+          alt="Player freedom contrasted with command and control"
         />
         <p>
           With <span class="accent-text">SCANZ</span>, you get all the
@@ -112,7 +116,7 @@
     <img
       class="bottom-image"
       src="/who-is-scanz.png"
-      alt="Who is SCANZ"
+      alt="Person greeting sheep in playful SCANZ illustration"
     />
   </main>
 </template>

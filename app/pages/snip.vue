@@ -7,7 +7,7 @@
       <img
         class="snip-image"
         src="/scan-news-information-propaganda.png"
-        alt="SNIP - SCANZ News Information and Propaganda"
+        alt="SNIP broadcast graphic for SCANZ news updates"
       />
       <p class="coming-soon">Coming Soon</p>
     </section>
