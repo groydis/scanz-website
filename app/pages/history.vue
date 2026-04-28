@@ -168,7 +168,10 @@
       </article>
     </section>
 
-    <section class="next-card container content-prose" aria-labelledby="next-title">
+    <section
+      class="next-card container content-prose surface-card surface-card-accent"
+      aria-labelledby="next-title"
+    >
       <h2 id="next-title">What's Next?</h2>
       <p>Honestly?</p>
       <p>More of the same.</p>
