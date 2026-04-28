@@ -68,9 +68,20 @@
 <script setup lang="ts">
 import { DISCORD_INVITE_URL } from "../../constants/links";
 
-const { data: posts } = await useAsyncData("snip-index", () =>
-  queryCollection("snip").order("date", "DESC").all(),
+const { data: posts, refresh: refreshPosts } = await useAsyncData(
+  "snip-index",
+  () => queryCollection("snip").order("date", "DESC").all(),
+  {
+    default: () => [],
+  },
 );
+
+onMounted(() => {
+  // Recover from stale/empty SSR payloads by refetching once on client.
+  if (!posts.value.length) {
+    refreshPosts();
+  }
+});
 
 useScanzSeo({
   title: "SCANZ News & Updates – Star Citizen ANZ Insights",
