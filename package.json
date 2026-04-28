@@ -17,8 +17,12 @@
   "optionalDependencies": {
     "@emnapi/core": "^1.10.0",
     "@emnapi/runtime": "^1.10.0",
+    "@esbuild/linux-x64": "^0.27.7",
+    "@oxc-minify/binding-linux-x64-gnu": "^0.117.0",
     "@oxc-parser/binding-linux-x64-gnu": "^0.117.0",
-    "@oxc-transform/binding-linux-x64-gnu": "^0.117.0"
+    "@oxc-transform/binding-linux-x64-gnu": "^0.117.0",
+    "@parcel/watcher-linux-x64-glibc": "^2.5.6",
+    "@rollup/rollup-linux-x64-gnu": "^4.60.2"
   },
   "devDependencies": {
     "commander": "^13.1.0"
