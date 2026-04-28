@@ -246,8 +246,7 @@ useHead({
   text-transform: uppercase;
 }
 
-.join-card h2,
-.ready-cta h2 {
+.join-card h2 {
   font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1;
   letter-spacing: 0.035em;
@@ -311,11 +310,6 @@ useHead({
   opacity: 1;
 }
 
-.ready-cta {
-  margin-top: 4rem;
-  text-align: center;
-}
-
 @media (max-width: 640px) {
   .join-page {
     padding: 3.5rem 1.25rem 5rem;
@@ -323,8 +317,7 @@ useHead({
 
   .join-content,
   .join-faq,
-  .join-link-card,
-  .ready-cta {
+  .join-link-card {
     margin-top: 3rem;
   }
 }

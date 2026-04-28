@@ -189,9 +189,7 @@ useScanzSeo({
   background: var(--color-bg);
 }
 
-.about-hero strong,
-.accent-line,
-.closing-line {
+.about-hero strong {
   color: var(--color-accent);
 }
 
@@ -201,8 +199,7 @@ useScanzSeo({
   margin-top: 4rem;
 }
 
-.about-card-accent,
-.final-card {
+.about-card-accent {
   border-color: rgb(245 77 20 / 42%);
   background: rgb(245 77 20 / 8%);
 }
@@ -211,13 +208,6 @@ useScanzSeo({
   font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1;
   letter-spacing: 0.035em;
-}
-
-.accent-line,
-.closing-line {
-  font-size: clamp(1.25rem, 3vw, 1.8rem);
-  font-weight: 800;
-  opacity: 1;
 }
 
 .feature-grid {
