@@ -29,7 +29,13 @@ function getSnipPrerenderRoutes(): string[] {
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap'],
+  site: {
+    url: process.env.NUXT_SITE_URL || 'https://wescanz.com',
+  },
+  sitemap: {
+    urls: getSnipPrerenderRoutes().map((loc) => ({ loc })),
+  },
   nitro: {
     prerender: {
       routes: ['/snip', ...getSnipPrerenderRoutes()],
