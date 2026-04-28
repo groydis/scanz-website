@@ -15,129 +15,157 @@
 
     <section class="about-content" aria-label="About SCANZ details">
       <article class="about-card">
-        <h2>A Community for Everyone</h2>
+        <h2>Who We Are</h2>
         <p>
-          SCANZ is open to players of all skill levels, backgrounds, and
-          playstyles.
+          SCANZ is a Star Citizen community built around one simple idea:
+          community first, gameplay second.
         </p>
         <p>
-          Whether you're brand new to the 'verse or a seasoned pilot, you'll find
-          people willing to:
+          We're a group of Australian and New Zealand players who enjoy the game
+          for what it is: chaotic, unpredictable, and better with other people.
         </p>
-        <ul>
-          <li>Help you learn</li>
-          <li>Fly with you</li>
-          <li>Or just jump into something chaotic for the fun of it</li>
-        </ul>
         <p>
-          We value positive interactions, teamwork, and creating an environment
-          where people actually want to stick around.
+          Some of us have been around for years. Others joined yesterday. What
+          matters is that when you jump in, there's always someone to fly with.
         </p>
       </article>
 
       <article class="about-card">
-        <h2>All Playstyles Welcome</h2>
-        <p>Star Citizen is a big game, and we treat it that way.</p>
-        <p>Our members take part in everything from:</p>
-        <ul>
-          <li>Bounty hunting and mercenary work</li>
-          <li>Salvaging and mining</li>
-          <li>Hauling and trading</li>
-          <li>Piracy and PVP</li>
-        </ul>
-        <p>Some people focus on one path. Others bounce between everything.</p>
-        <p>Both are part of SCANZ.</p>
-        <p>
-          We support all gameplay styles, as long as they respect RSI's Terms of
-          Service and the people around them.
-        </p>
-      </article>
-
-      <article class="about-card about-card-accent">
-        <h2>Where PVP and Industry Work Together</h2>
-        <p>We don't split the community into "combat" and "non-combat."</p>
-        <p>In SCANZ, those roles support each other.</p>
-        <p>
-          Combat pilots protect industrial operations. Industrial players create
-          opportunities for combat.
-        </p>
-        <p>
-          This balance creates more engaging gameplay, and more reasons to work
-          together.
-        </p>
-      </article>
-
-      <article class="about-card">
-        <h2>Structured, Not Rigid</h2>
-        <p>
-          We run organised events, maintain clear communication, and have
-          dedicated organisers and custodians.
-        </p>
-        <p>But we're not here to control how you play.</p>
-        <p>Some members are highly active. Some drop in during patch cycles.</p>
-        <p>Both are equally welcome.</p>
-        <p>You don't need the biggest ship. You don't need to be the best pilot.</p>
-        <p class="accent-line">You just need a good attitude.</p>
-      </article>
-
-      <article class="about-card">
-        <h2>Built on Respect</h2>
-        <p>
-          Whether we're flying together or competing in the 'verse, respect comes
-          first.
-        </p>
-        <p>We focus on:</p>
-        <ul>
-          <li>Supporting each other</li>
-          <li>Creating content together</li>
-          <li>Building shared experiences</li>
-        </ul>
-        <p>
-          SCANZ is at its best when people are contributing to something bigger
-          than themselves.
-        </p>
-      </article>
-
-      <article class="about-card">
-        <h2>What We're Building</h2>
+        <h2>Our Values</h2>
         <div class="feature-grid">
           <div class="feature-item">
-            <h3>Creating memorable moments</h3>
+            <h3>No Ego</h3>
             <p>
-              From smooth operations to complete chaos, the stories are what
-              matter.
+              No one cares what ship you own or how long you've been playing.
+              We're here to enjoy the game, not measure ourselves against each
+              other.
             </p>
           </div>
           <div class="feature-item">
-            <h3>Bringing playstyles together</h3>
-            <p>Combat, industry, piracy, all working in balance.</p>
-          </div>
-          <div class="feature-item">
-            <h3>Growing the ANZ community</h3>
+            <h3>All Gameplay Is Valid</h3>
             <p>
-              Building one of the most active Star Citizen communities in
-              Australia &amp; New Zealand.
+              Combat, hauling, mining, salvaging, exploring, or just figuring
+              things out: it all counts. We don't force roles or tell you how to
+              play Star Citizen.
             </p>
           </div>
           <div class="feature-item">
-            <h3>Supporting new players</h3>
+            <h3>Help First, Gatekeep Never</h3>
             <p>
-              Helping people learn the game, find their place, and enjoy the
-              'verse from day one.
+              New players aren't a burden. They're future crew. If you're
+              learning, we'll help you get comfortable, get set up, and actually
+              enjoy the game.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3>Play Together, Not Alone</h3>
+            <p>
+              Star Citizen is at its best when things go wrong with other
+              people. Whether it's planned operations or spontaneous chaos, we
+              lean into playing as a group.
             </p>
           </div>
         </div>
       </article>
 
-      <article class="about-card final-card">
-        <h2>More Than an Org</h2>
-        <p>SCANZ isn't just an organisation.</p>
+      <article class="about-card about-card-accent">
+        <h2>Why Join an Australian Star Citizen Org</h2>
+        <p>Playing in the right timezone changes everything.</p>
         <p>
-          It's a group of people who enjoy playing together, whether that's for
-          an hour after work, or a full night of operations that don't go to plan.
+          SCANZ is built around Australia and New Zealand evenings, which means
+          you'll actually find people online when you are, events happen at times
+          that make sense, and you're not trying to sync with EU or US schedules
+          at 3am.
         </p>
-        <p>The ships are part of it.</p>
-        <p class="closing-line">The community is the reason people stay.</p>
+        <p>
+          If you've ever joined an org and found it empty when you log in, this
+          fixes that. Start here to
+          <NuxtLink class="text-link" to="/join"
+            >join our Australian Star Citizen org</NuxtLink>.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h2>Benefits of a New Zealand &amp; Australian Star Citizen Guild</h2>
+        <p>
+          Being part of an ANZ-focused Star Citizen community like SCANZ means
+          consistent group gameplay during AU/NZ peak hours, regular events and
+          operations without strict attendance, access to experienced players
+          across all game loops, and a social Discord where people are actually
+          active.
+        </p>
+        <p>
+          It's less about structure, more about having a reliable crew ready to
+          jump in. You can also
+          <NuxtLink class="text-link" to="/history"
+            >learn how SCANZ grew into an ANZ Star Citizen community</NuxtLink>.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h2>Leadership &amp; Structure</h2>
+        <p>
+          SCANZ is run by a small group of officers and custodians who keep
+          things moving behind the scenes.
+        </p>
+        <p>
+          They organise events, help new members get started, and make sure the
+          community stays active and welcoming.
+        </p>
+        <p>
+          There's no rigid hierarchy or rank grind: just people putting in the
+          effort to keep things running smoothly.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h2>What Makes SCANZ Different</h2>
+        <p>A lot of Star Citizen orgs focus on structure, roles, and control.</p>
+        <p>We don't.</p>
+        <p>
+          SCANZ works because people join because they want to be here, there's
+          no pressure to play a certain way, and the focus is on the experience,
+          not the outcome.
+        </p>
+        <p>
+          We're not trying to be the biggest org. We're trying to be the one
+          people actually stick around in.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h2>Who SCANZ Is For</h2>
+        <p>
+          You'll fit in here if you want people to play with consistently, enjoy
+          group gameplay without strict rules, are new and want help getting
+          started, or are experienced and just want a solid crew.
+        </p>
+        <p>
+          You probably won't enjoy it if you're looking for rigid
+          chain-of-command gameplay, want to min-max everything at all times, or
+          prefer playing solo 100% of the time.
+        </p>
+      </article>
+
+      <article class="about-card final-card">
+        <h2>Ready to Fly With Us?</h2>
+        <p>
+          If SCANZ sounds like your kind of crew, jump into Discord and come say
+          hi. No pressure: just join in and see if it feels right.
+        </p>
+        <div class="cta-actions" aria-label="Join SCANZ">
+          <a
+            class="button button-primary"
+            href="https://discord.gg/3atj8pjhFH"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join Discord
+          </a>
+          <NuxtLink class="button button-secondary" to="/join">
+            How to Join SCANZ
+          </NuxtLink>
+        </div>
       </article>
     </section>
   </main>
@@ -252,6 +280,18 @@ useSeoMeta({
   color: var(--color-accent);
 }
 
+.text-link {
+  color: var(--color-accent);
+  font-weight: 800;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: #ff6a35;
+}
+
 .accent-line,
 .closing-line {
   font-size: clamp(1.25rem, 3vw, 1.8rem);
@@ -282,6 +322,64 @@ useSeoMeta({
   margin-top: 0.75rem;
 }
 
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.875rem;
+  margin-top: 1.5rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 48px;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.button-primary {
+  background: var(--color-accent);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: #ff6a35;
+  border-color: #ff6a35;
+}
+
+.button-secondary {
+  background: rgb(0 0 0 / 12%);
+  color: var(--color-text);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  background: var(--color-accent);
+}
+
 @media (max-width: 700px) {
   .about-page {
     padding: 3.5rem 1.25rem 5rem;
@@ -293,6 +391,15 @@ useSeoMeta({
 
   .feature-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cta-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
   }
 }
 </style>
