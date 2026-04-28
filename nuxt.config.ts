@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { readdirSync } from 'node:fs'
+import { resolve } from 'node:path'
 
 /** When true, @nuxt/content uses `node:sqlite` and skips the better-sqlite3 auto-install prompt (avoids TTY errors in non-interactive environments). */
 function nuxtContentCanUseNodeSqlite(): boolean {
@@ -12,9 +14,27 @@ function nuxtContentCanUseNodeSqlite(): boolean {
   }
 }
 
+function getSnipPrerenderRoutes(): string[] {
+  try {
+    const snipDir = resolve(process.cwd(), 'content/snip')
+    const files = readdirSync(snipDir, { withFileTypes: true })
+      .filter((entry) => entry.isFile() && entry.name.endsWith('.md'))
+      .map((entry) => entry.name.replace(/\.md$/u, ''))
+
+    return files.map((slug) => `/snip/${slug}`)
+  } catch {
+    return []
+  }
+}
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   modules: ['@nuxt/content'],
+  nitro: {
+    prerender: {
+      routes: ['/snip', ...getSnipPrerenderRoutes()],
+    },
+  },
   content: {
     experimental: nuxtContentCanUseNodeSqlite() ? { nativeSqlite: true } : {},
   },
