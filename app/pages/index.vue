@@ -122,6 +122,8 @@
 </template>
 
 <script setup lang="ts">
+const discordInviteUrl = "https://discord.gg/3atj8pjhFH";
+
 useSeoMeta({
   title: "SCANZ – Star Citizen Australia & New Zealand Community",
   description:
@@ -131,6 +133,40 @@ useSeoMeta({
     "A mature, casual Star Citizen community for ANZ players, open to every experience level and playstyle.",
   ogImage: "/who-is-scanz.png",
   twitterCard: "summary_large_image",
+});
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "SCANZ – Star Citizen Australia & New Zealand",
+  alternateName: "SCANZ",
+  url: "https://wescanz.com",
+  logo: "https://wescanz.com/logo.png",
+  description:
+    "SCANZ is a mature, casual Star Citizen community for players in Australia and New Zealand. Join our Discord and RSI org to explore the verse together.",
+  areaServed: [
+    {
+      "@type": "Country",
+      name: "Australia",
+    },
+    {
+      "@type": "Country",
+      name: "New Zealand",
+    },
+  ],
+  sameAs: [
+    "https://robertsspaceindustries.com/en/orgs/scanz",
+    discordInviteUrl,
+  ],
+};
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify(organizationSchema),
+    },
+  ],
 });
 </script>
 
