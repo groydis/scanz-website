@@ -15,6 +15,10 @@ tags:
 
 Short intro (1–2 sentences max). Set the tone. Tease the chaos.
 
+![{{Short, descriptive alt text}}](/snip-images/{{POST-SLUG}}/{{image-file-name}}.webp)
+
+_Store image files in `content/snip/_images/{{POST-SLUG}}/` using lowercase kebab-case names._
+
 ---
 
 ## Mission Brief

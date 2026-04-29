@@ -3,6 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "prebuild": "node scripts/sync-snip-images.mjs",
+    "predev": "node scripts/sync-snip-images.mjs",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "preview": "nuxt preview"
