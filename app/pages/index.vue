@@ -26,12 +26,31 @@
             Join Discord
           </a>
         </div>
-        <p>Community. Crew. Chaos.</p>
+        <p class="hero-tagline">Community. Crew. Chaos.</p>
+        <a href="#about-title" class="hero-learn-more">
+          <span class="hero-learn-more-label">Want to learn more?</span>
+          <span class="hero-learn-more-arrow" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 5v14" />
+              <path d="m8 15 4 4 4-4" />
+            </svg>
+          </span>
+        </a>
       </div>
     </section>
     <section class="about" aria-labelledby="about-title">
       <div class="section-content container-narrow">
-        <h2 id="about-title">Who are SCANZ?</h2>
+        <h2 id="about-title" class="home-scroll-target">Who are SCANZ?</h2>
         <p>
           <span class="accent-text">SCANZ</span> is a mature, casual Star
           Citizen community based in Australia and New Zealand, but open to
@@ -241,12 +260,67 @@ useHead({
   margin-top: 1.75rem;
 }
 
-.hero-copy p {
+.hero-tagline {
   font-size: clamp(1.1rem, 2.4vw, 1.5rem);
   line-height: 1.5;
   color: var(--color-text);
   letter-spacing: 0.08em;
   opacity: 0.9;
+}
+
+.hero-learn-more {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  text-decoration: none;
+  opacity: 0.92;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hero-learn-more:hover,
+.hero-learn-more:focus-visible {
+  opacity: 1;
+  transform: translateY(2px);
+}
+
+.hero-learn-more:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.hero-learn-more-arrow {
+  display: flex;
+  color: var(--color-accent);
+  animation: hero-learn-more-bob 2.2s ease-in-out infinite;
+}
+
+@keyframes hero-learn-more-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-learn-more-arrow {
+    animation: none;
+  }
+}
+
+.home-scroll-target {
+  scroll-margin-top: 5.5rem;
 }
 
 .about,
